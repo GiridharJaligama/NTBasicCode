@@ -1,0 +1,84 @@
+$topnav-background-color: #222;
+.navbar {
+    a:hover,
+a:focus {
+    color: #fff;
+    outline: none;
+    outline-offset: -2px;
+}}
+:host {
+    .navbar {
+        // background-color: $topnav-background-color;
+        background-color: #283f54;
+        .navbar-brand {
+            color: #fff;
+        }
+        .nav-item > a {
+            color: #999;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    .messages {
+        width: 300px;
+        .media {
+            border-bottom: 1px solid #ddd;
+            padding: 5px 10px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .media-body {
+            h5 {
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .small {
+                margin: 0;
+            }
+            .last {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+    .dropdown-item {
+        padding: 0.25rem 0.5rem !important ;
+    }
+    .hide-sidebar {
+        .sidebar {
+            left: 40px !important;
+        }
+        .main-container {
+            margin-left: 50px !important;
+        }
+    }
+    .brandimg {
+        width: 100px;
+        height: 45px;
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+    .closeimg {
+        float: right;
+        padding-right: 5px;
+        padding-top: 15px;
+    }
+    .brandlogocontainer{
+        background:white;
+        width:235px ;
+    }
+    .fixed-top{
+        padding:0px;background:#283F54;
+        display:flex;
+        justify-content: space-between;
+    }
+    .profile{
+        font-size: 13px ; margin-right:40px
+    }
+    .smallfont{
+        font-size: 12px !important;
+    }
+   
+}

@@ -1,0 +1,29 @@
+.progress-wrapper {
+    position: relative;
+    margin: 20px auto;
+    font-size: 40px;
+  }
+  round-progress {
+    margin: auto;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+@media screen and (max-width: 600px) {
+.report{
+  width:600px ;
+}
+}
+@media screen and (max-height: 600px) {
+  .report{
+    height:600px ;
+  }
+  }
+@media screen and (min-width: 500px)  and (min-height: 600px) {
+  .report{
+    height : 82vh ;
+  }
+}

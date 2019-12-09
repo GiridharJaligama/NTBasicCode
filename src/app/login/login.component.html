@@ -1,0 +1,62 @@
+<!-- <img class="bg" src="assets/images/LoginBackground/BackgroundImage.jpg" alt=""> -->
+<div class="login-page" [@routerTransition]>
+    <div class="row justify-content-md-center">
+        <div class="col-md-4 small myform">
+            <div class='pull-left logoImg'>
+                <img src="assets/images/logo-login.png" width="" />
+            </div>
+            <div>
+                <hr /> </div>
+            <form id="loadtest">
+                <div class="form-content small">
+                    <select class="form-control input-underline " id="env" placeholder="Environment"  name="env" [(ngModel)]="environment">
+                        <option value="DEV">DEV</option>
+                        <option value="QA1">QA1</option>
+                        <option value="QA2">QA2</option>
+                        <option value="QA3">QA3</option>
+                        <option value="PT">PT</option>
+                        <option value="RC">PC</option>
+                        <option value="TESTING">TESTING</option>
+                        <option value="TRAINING">TRAINING</option>
+                    </select>
+                    <select class="form-control input-underline " id="org" placeholder="Organization"  name="org" [(ngModel)]="org">
+                        <option value="Alaska">Alaska</option>
+                         <option value="American">American</option>
+                         <option value="Delta">Delta</option>
+                         <option value="Frontier">Frontier</option>
+                         <option value="JetBlue">Jetblue</option>
+                         <option value="Southwest">Southwest</option>
+                         <option value="United">United</option>
+                         <option value="WestJet">WestJet</option>
+                         <option value="AATC">AATC</option>
+                         <option value="GTAA">GTAA</option>
+                         <option value="MSP">MSP</option>
+                    </select>
+                    <input type="text" name="name"  [(ngModel)]="name" class="form-control input-underline  text-xs-center" id="username"
+                        placeholder="Username" required>
+
+
+                        <div *ngIf="name ==='' && saved" class="has-danger">
+                            Name is required.
+                        </div>
+                    <input type="password" name="password" [(ngModel)]="pass" class="form-control input-underline  text-xs-center" id="password"
+                        placeholder="Password" required>
+
+                    <div *ngIf="pass ==='' && saved" class="has-danger">
+                            Password is required.
+                    </div>
+
+
+                    <div class=" pull-right buttonrow " >
+                        <div id="submit" class="">
+                            <button class="btn btn-success login" type="submit" (click)="onLoggedin()"> Log in </button>
+                        </div>
+                    </div>
+                    <div id="loader">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

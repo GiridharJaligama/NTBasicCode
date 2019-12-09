@@ -1,0 +1,12 @@
+<!-- <app-header [types]="types" [label]="label" ></app-header> -->
+<app-header  ></app-header>
+<app-sidebar [links]="links1"></app-sidebar>
+<section class="main-container" >
+        <div style="margin-top : 10px; font-size:13px;font-weight:bold;font-family:Arial;"> Lost and Found Reports</div>
+        <div class='danger' id='Error'></div>
+        <label *ngFor=" let report of types" class='radio'>
+                <input type="radio" name="label" value="{{report['uri']}}" id="{{report['uri']}}" (click)="RetrieveReports1(report['uri'] , label) "
+        checked="{{report['checked']}}"                  ngModel> <span style="font-size:13px;"> {{report['type']}} </span>
+            </label>
+    <router-outlet></router-outlet>
+</section>

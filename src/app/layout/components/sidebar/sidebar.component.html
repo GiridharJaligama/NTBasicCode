@@ -1,0 +1,34 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+        <form #f>
+            <div class="list-group sidebarcontent">
+                    <ul class='navi'  >
+                            <li>
+                    <a class=' row list-group-item sidebarheading'>Reports Navigation </a>
+                             </li> </ul>
+                    <ul class='navi' *ngFor="let link1 of links" >
+                    <li>
+                        <!-- <a class=' row list-group-item sidebarheading'>Reports Navigation </a> -->
+                        
+                        <!-- <a class=' row list-group-item folderheading'  >{{link1['FolderName']}} </a> -->
+                    </li>
+                    <ul class='navi'>
+
+                    <a *ngFor="let link of link1['dashboardlist']" class="row list-group-item " [routerLinkActive]="['router-link-active']" [class.smart]="clicked === link || (link1['dashboardlist'][0] === link && firsttime === true)" (click)="clicked = link ; RetrieveReports(link['uri'] , link['label']) ; ">
+                        <!-- <a [routerLinkActive]="['router-link-active']"> -->
+                            <li>
+                                <!-- <span  > -->
+                                <span class=' fa fa-fw fa-bar-chart-o '>
+                                    <!-- <img src='assets/images/CloseMenu.svg'/> -->
+                                </span>
+                                <span>{{link['label']}}</span>
+                                <!-- </span>  -->
+                            </li>
+                        <!-- </a> -->
+    
+                    </a>
+                    </ul>
+                    <!-- </li> -->
+                </ul>
+            </div>
+        </form>
+    </nav>
